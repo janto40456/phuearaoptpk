@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>พรรคเพื่อเราชาวฟ้าแดง</title>
+
+<style>
+    .menu-bar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:25px 0;
+}
+
+.menu-bar a{
+  padding:12px 26px;
+  text-decoration:none;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  border-radius:25px;
+  background:rgba(0,0,0,0.6);
+  transition:.3s;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ */
+.menu-bar a:hover{
+  background:black;
+  box-shadow:0 0 15px gold;
+  transform:scale(1.08);
+}
+</style>
+
+<style>
+/* ===== พื้นหลังเว็บ ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background: linear-gradient(-45deg,#ff416c,#ff4b2b,#36d1dc,#5b86e5);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.bg-card{
+    position:relative;
+    width:1000px;
+    height:500px;
+    margin:30px auto;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+/* รูปพื้นหลัง */
+.bg-image{
+    position:absolute;
+    inset:0;
+    background-image:url("bg4.jpg");
+    background-size:cover;
+    background-position:center;
+    z-index:1;
+}
+
+
+/* ข้อความ */
+.content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:bold;
+    z-index:3;
+}
+
+/* ===== ช่องทางติดต่อ ===== */
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    width:80%;
+    margin:40px auto;
+}
+
+.run-contact{
+    position:relative;
+    padding:30px;
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+    border-radius:22px;
+    background:rgba(0,0,0,0.6);
+    overflow:hidden;
+}
+
+.run-contact::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:25px;
+    background:linear-gradient(90deg,#1e90ff,#ff2e2e,#1e90ff,#ff2e2e);
+    background-size:300% 100%;
+    animation:runFB 3s linear infinite;
+    z-index:-1;
+}
+
+.run-contact::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    border-radius:18px;
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
+}
+
+.run-contact:hover{
+    transform:scale(1.08);
+}
+</style>
+</head>
+<style>
+ /* อนิเมชันรูปตอนเข้าเว็บ */
+@keyframes imgEnter {
+  0%{
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bg-image{
+  animation: imgEnter 2s ease-out forwards;
+}
+   
+</style>
+<style>
+    /* กล่องรูปเดิม */
+.bg-card{
+    position:relative;
+    width:1000px;
+    height:550px;
+    margin:30px auto;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+/* รูป */
+.bg-image{
+    position:absolute;
+    inset:0;
+    background-image:url("bg4.jpg");
+    background-size:cover;
+    background-position:center;
+    z-index:1;
+}
+
+/* ไฟวิ่ง (ซ่อนไว้ก่อน) */
+.bg-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    padding:4px;
+    opacity:0;                 /* ❌ ไม่โชว์ตอนปกติ */
+    transition:opacity 1.5s;
+    pointer-events:none;
+
+    background: linear-gradient(
+      90deg,
+      gold,
+      #1e90ff,
+      #ff2e2e,
+      gold,
+      #1e90ff,
+      #ff2e2e,
+      gold
+    );
+    background-size:400% 100%;
+    animation: runMix 3s linear infinite;
+
+    /* ทำให้เป็นเส้นรอบรูป */
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    /* ✨ เงาเรือง */
+    box-shadow:
+      0 0 15px gold,
+      0 0 25px #1e90ff,
+      0 0 35px #ff2e2e;
+
+    z-index:2;
+}
+
+/* 🔥 โชว์ไฟเฉพาะตอนเอาเมาส์ชี้ */
+.bg-card:hover::after{
+    opacity:1;
+}
+
+@keyframes runMix{
+    0%{background-position:0%;}
+    100%{background-position:400%;}
+}
+
+</style>
+
+<body>
+<div class="text-line-box">
+  <div class="run-line top"></div>
+
+<marquee> <h2><b>W E L C O M E   T O 💙❤️  พรรคเพื่อเราชาวฟ้าแดง  💙❤️</b></h2></marquee>
+
+  <div class="run-line bottom"></div>
+</div>
+<style>
+    .text-line-box{
+  width:95%;
+  margin:25px auto;
+  position:relative;
+}
+
+.run-line{
+  position:relative;
+  width:100%;
+  height:4px;
+  background:black;
+  overflow:hidden;
+}
+
+/* 🔥 ไฟสีทอง (ความยาวเดิม) */
+.run-line::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120px;        /* ระยะเริ่ม */
+  width:120px;        /* ความยาวไฟ = เดิม */
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    gold,
+    orange,
+    gold,
+    transparent
+  );
+  animation:lineRun 1s linear infinite;
+}
+
+@keyframes lineRun{
+  0%{left:-120px;}
+  100%{left:100%;}
+}
+
+.top{ margin-bottom:10px; }
+.bottom{ margin-top:10px; }
+
+</style>
+<!-- การ์ดรูป + ไฟวิ่ง -->
+<div class="bg-card">
+    <div class="bg-image"></div>
+   
+    <div class="run-border"></div>
+</div>
+
+<!-- ช่องทางติดต่อ -->
+<div class="contact-grid">
+    <a class="run-contact" href=https://www.instagram.com/phuearao_ptpk?igsh=NzJmOWh5ejQ0eHpq target="_blank">
+        📸 Click Instagram
+    </a>
+
+    <a class="run-contact" href="https://www.tiktok.com/@kingofschool" target="_blank">
+        🎵 Click TikTok
+    </a>
+</div>
+
+<div class="gold-line"></div>
+
+</body>
+
+
+<body>
+    <!-- แถบเมนู -->
+<nav class="menu-bar">
+  
+    
+    <h2><a href="policy.html">นโยบาย</a></h2>
+
+  
+  <h2><a href="members.html">สมาชิก</a></h2>
+  
+  
+  
+  <h2><a href="report.html">แจ้งปัญหา</a></h2>
+
+
+
+
+
+
+</nav>
+
+</body>
+</html>
+
